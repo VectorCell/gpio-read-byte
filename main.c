@@ -72,6 +72,6 @@ int main (int argc, char *argv[]) {
 		byte <<= 1;
 		byte += readpin(pins[k]);
 	}
-	printf("byte is: %d\n", byte);
+	printf("%d\n", byte);
 	return 0;
 }
