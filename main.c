@@ -10,14 +10,30 @@
 typedef uint8_t byte_type;
 typedef int     pin_type;
 
+#ifndef P_0
 #define P_0  8
+#endif
+#ifndef P_1
 #define P_1  9
+#endif
+#ifndef P_2
 #define P_2  7
+#endif
+#ifndef P_3
 #define P_3 15
+#endif
+#ifndef P_4
 #define P_4 16
+#endif
+#ifndef P_5
 #define P_5  1
+#endif
+#ifndef P_6
 #define P_6  0
+#endif
+#ifndef P_7
 #define P_7  2
+#endif
 const size_t n_pins = 8;
 const pin_type pins[] = {
 	P_0,
