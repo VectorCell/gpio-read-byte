@@ -38,7 +38,7 @@ int init () {
 	#endif
 }
 
-int readpin(pin pin) {
+int readpin(pin_type pin) {
 	#ifndef DEBUG
 		return digitalRead(pin);
 	#else
