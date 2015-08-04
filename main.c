@@ -38,8 +38,12 @@ int init () {
 	#endif
 }
 
-int readpin(int pin) {
-
+int readpin(pin pin) {
+	#ifndef DEBUG
+		return digitalRead(pin);
+	#else
+		return 1;
+	#endif
 }
 
 int main (int argc, char *argv[]) {
@@ -50,7 +54,7 @@ int main (int argc, char *argv[]) {
 	byte_type byte = 0;
 	for (size_t k = 0; k < n_pins; ++k) {
 		byte <<= 1;
-		byte += digitalRead(pins[k]);
+		byte += readpin(pins[k]);
 	}
 	printf("byte is: %d\n", byte);
 	return 0;
