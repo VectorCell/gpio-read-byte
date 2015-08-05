@@ -47,7 +47,11 @@ const pin_type pins[] = {
 
 int init () {
 	#ifndef DEBUG
-		return wiringPiSetup();
+		if (wiringPiSetup() == -1)
+			return 1;
+		for (size_t k = 0; k < n_pins; ++k) {
+			pinMode(pins[k], OUTPUT);
+		}
 	#else
 		return 0;
 	#endif
