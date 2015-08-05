@@ -52,9 +52,8 @@ int init () {
 		for (size_t k = 0; k < n_pins; ++k) {
 			pinMode(pins[k], OUTPUT);
 		}
-	#else
-		return 0;
 	#endif
+	return 0;
 }
 
 int readpin(pin_type pin) {
